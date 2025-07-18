@@ -3,9 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CSS Learn - Modern Layout</title>
+    <style>
+        /* General Body Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            background-color: #f4f7f6; /* Light gray background */
+            color: #333; /* Dark gray text */
+            line-height: 1.6;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #2c3e50; /* Dark blue-gray */
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar ul li {
+            margin: 0 20px;
+        }
+
+        .navbar ul li a {
+            color: #ecf0f1; /* Light silver */
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: #3498db; /* Bright blue */
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient to right, #3498db, #8e44ad; /* Blue to purple gradient */
+            color: #fff;
+            text-align: center;
+            padding: 80px 20px;
+            margin-bottom: 30px;
+        }
+
+        .hero h1 {
+            font-size: 3.5em;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero p {
+            font-size: 1.3em;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Section Styling */
+        .section {
+            background-color: #fff;
+            margin: 20px auto;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            max-width: 900px;
+        }
+
+        .section h2 {
+            color: #2980b9; /* Stronger blue */
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+
+        .section p {
+            text-align: justify;
+        }
+
+        .section img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #2c3e50; /* Dark blue-gray, matching navbar */
+            color: #ecf0f1; /* Light silver */
+            text-align: center;
+            padding: 25px 0;
+            margin-top: 50px;
+            font-size: 0.9em;
+        }
+
+        /* Original H1 from your provided code */
+        h1 {
+            color: #2c3e50; /* Dark blue-gray */
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        /* Original paragraph and H2 from your provided code */
+        p {
+            margin-bottom: 1em;
+        }
+
+        .p2 {
+            color: #e74c3c; /* Red color for external styling example */
+            font-weight: bold;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        #h2 { /* This ID was on an H1 in your original, changed to match content */
+            color: #16a085; /* Greenish-blue */
+            text-align: center;
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Ths  dnhjdhj cmmcm</h1>
+    <header class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About CSS</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <section class="hero" id="home">
+        <h1>Mastering CSS: Style Your Web! ✨</h1>
+        <p>Unlock the power of Cascading Style Sheets to create beautiful and responsive web designs.</p>
+    </section>
+
+    <div class="section" id="about">
+        <h2>What is CSS?</h2>
+        <p>
+            <strong>CSS (Cascading Style Sheets)</strong> is a style sheet language used for describing the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
+            It saves a lot of work. It can control the layout of multiple web pages all at once. External stylesheets are stored in CSS files.
+        </p>
+        <img src="https://via.placeholder.com/600x350/9b59b6/ffffff?text=CSS+Concepts" alt="CSS Concepts Placeholder Image" width="600" height="350">
+    </div>
+
+    <div class="section" id="features">
+        <h2>Key Features of CSS</h2>
+        <p>
+            CSS allows for a clear separation of content from presentation. This makes the HTML structure cleaner and easier to maintain. With CSS, you can control colors, fonts, spacing, layout, and much more. It also provides capabilities for **responsive design**, ensuring your website looks great on any device, from desktops to mobile phones.
+        </p>
+        <p>
+            Here's a breakdown of some core aspects:
+            <ul>
+                <li><strong>Selectors:</strong> Target specific HTML elements.</li>
+                <li><strong>Properties & Values:</strong> Define the styles to apply (e.g., `color: blue;`).</li>
+                <li><strong>Cascade:</strong> Determines which styles apply when multiple rules conflict.</li>
+                <li><strong>Inheritance:</strong> Properties are passed down from parent to child elements.</li>
+                <li><strong>Box Model:</strong> Understand how elements take up space on the page.</li>
+            </ul>
+        </p>
+    </div>
+
+    <div class="section">
+        <h2>Styling Examples (Your Original Content)</h2>
+        <p>CSS is a style sheet language used for describing the presentation of a document written in HTML or XML.</p>
+        <img src="https://via.placeholder.com/400x300/34495e/ffffff?text=Your+Original+Image" alt="Your original image placeholder" width="400" height="300">
+        <br>
+
+        <h2>This is a heading FOR EXTERNAL STYLING</h2>
+        <p class="p2">This is a paragraph for external styling.</p>
+        <h1 id="h2">CSS LEARN 2</h1>
+    </div>
+
+    <footer class="footer" id="contact">
+        <p>&copy; 2025 CSS Learn. All rights reserved. | Designed with ❤️ using Internal CSS</p>
+    </footer>
 </body>
 </html>
