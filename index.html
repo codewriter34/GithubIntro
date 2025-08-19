@@ -3,9 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Js Learning</title>
+    <style>
+    </style>
 </head>
 <body>
-    <h1>Ths  dnhjdhj cmmcm</h1>
+<input type="text" id="studentName" placeholder="Enter student name">
+<button id="checkBtn">Check Grade</button>
+<p id="result"></p>
+
+
+  <script>
+  let students = [
+  { name: "Maxim", grade: "A" },
+  { name: "Bob", grade: "B" },
+  { name: "Charlie", grade: "C" }
+];
+
+let input = document.getElementById("studentName");
+let button = document.getElementById("checkBtn");
+let result = document.getElementById("result");
+
+button.addEventListener("click", function() {
+  let name = input.value.trim();
+  let found = false;
+
+  for (let i = 0; i < students.length; i++) {
+    if (students[i].name.toLowerCase() === name.toLowerCase()) {
+      result.textContent = `${students[i].name} got grade ${students[i].grade}`;
+      found = true;
+      break;
+    }
+  }
+
+  if (!found) {
+    result.textContent = "Student not found.";
+  }
+});
+
+    </script>
 </body>
-</html>
+</html> 
